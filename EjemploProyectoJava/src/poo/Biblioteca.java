@@ -16,6 +16,7 @@ public class Biblioteca {
     this.horaCierre = 22;
   }
 
+  // * Para añadir/eliminar libros:
   public void addLibro(Libro libro) {
     libros.add(libro);
   }
@@ -23,6 +24,7 @@ public class Biblioteca {
     libros.remove(libro);
   }
 
+  // * Para añadir/eliminar salas:
   public void addSala(Sala sala) {
     salas.add(sala);
   }
@@ -30,6 +32,7 @@ public class Biblioteca {
     salas.remove(sala);
   }
 
+  // * Para ver si la biblioteca está abierta:
   public boolean estaAbierta(int hora) {
     if (hora >= 9 && hora < 22) {
       System.out.println("\nLa biblioteca " + this.nombre + " está abierta.");
@@ -40,6 +43,7 @@ public class Biblioteca {
     }
   }
 
+  // * Para ver si un libro está en un idioma distinto al español:
   public boolean esExtranjero(String idioma) {
     if (!idioma.equalsIgnoreCase("español")) {
       System.out.println("El libro está escrito en " + idioma + ".");
@@ -50,6 +54,7 @@ public class Biblioteca {
     }
   }
 
+  // * Para mostrar información de la biblioteca:
   public void informacion() {
     System.out.println("Biblioteca: " + this.nombre + " - " + this.direccion + ". Abierto de " + this.horaApertura + " a " + this.horaCierre + ".");
   }
