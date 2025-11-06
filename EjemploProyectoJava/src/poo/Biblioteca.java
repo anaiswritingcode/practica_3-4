@@ -6,8 +6,8 @@ public class Biblioteca {
   private String direccion;
   private int horaApertura;
   private int horaCierre;
-  private List<Libro> libros;
-  private List<Sala> salas;
+  private List<Libro> libros = new ArrayList<>();
+  private List<Sala> salas = new ArrayList<>();
 
   public Biblioteca(String nombre, String direccion) {
     this.nombre = nombre;
@@ -44,12 +44,12 @@ public class Biblioteca {
   }
 
   // * Para ver si un libro está en un idioma distinto al español:
-  public boolean esExtranjero(String idioma) {
-    if (!idioma.equalsIgnoreCase("español")) {
-      System.out.println("El libro está escrito en " + idioma + ".");
+  public boolean esExtranjero(Libro libro) {
+    if (!libro.getIdioma().equalsIgnoreCase("español")) {
+      System.out.println("El libro " + libro + " está escrito en " + libro.getIdioma() + ".");
       return true;
     } else {
-      System.out.println("El libro está en español.");
+      System.out.println("El libro " + libro + " está en español.");
       return false;
     }
   }
