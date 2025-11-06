@@ -89,4 +89,17 @@ public class Biblioteca {
       }
     }
   }
+
+  // * Para ver si existen libros buscando por su título:
+  public String buscarLibroPorTitulo(String titulo) {
+    for (Libro libro : libros) {
+      if (libro.getTitulo().equalsIgnoreCase(titulo)) {
+        System.out.println("El libro " + libro.getTitulo() + " se encuentra en la biblioteca " + this.nombre + ".");
+        return libro.getTitulo();
+      }
+    }
+    
+    System.out.println("El libro " + titulo + "no se ha encontrado en la biblioteca " + this.nombre + ".");
+    return null;
+  }
 }
