@@ -58,4 +58,35 @@ public class Biblioteca {
   public void informacion() {
     System.out.println("Biblioteca: " + this.nombre + " - " + this.direccion + ". Abierto de " + this.horaApertura + " a " + this.horaCierre + ".");
   }
+
+  // * Para mostrar los libros y salas disponibles:
+  public void mostrarBiblioteca() {
+    if (libros.isEmpty()) { // Si no hay libros lo notificamos.
+      System.out.println("\nNo se han añadido libros.");
+    } else {
+      System.out.println("\nLibros de la biblioteca " + this.nombre + ":");
+
+      int contadorLibros = 1;
+      for (Libro libro : libros) {
+        System.out.print(contadorLibros + ". "); // Mostramos una lista numérica.
+        System.out.println(libro.getTitulo() + ".");
+
+        contadorLibros++;
+      }
+    }
+
+    if (salas.isEmpty()) { // Si no hay salas lo notificamos.
+      System.out.println("\nNo se han añadido salas.");
+    } else {
+      System.out.println("\nSalas de la biblioteca " + this.nombre + ":");
+
+      int contadorSalas = 1;
+      for (Sala sala : salas) {
+        System.out.print(contadorSalas + ". "); // Mostramos una lista numérica.
+        System.out.println(sala.getNombre() + ".");
+
+        contadorSalas++;
+      }
+    }
+  }
 }
