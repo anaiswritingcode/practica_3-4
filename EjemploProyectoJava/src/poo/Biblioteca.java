@@ -46,10 +46,10 @@ public class Biblioteca {
   // * Para ver si un libro está en un idioma distinto al español:
   public boolean esExtranjero(Libro libro) {
     if (!libro.getIdioma().equalsIgnoreCase("español")) {
-      System.out.println("El libro " + libro + " está escrito en " + libro.getIdioma() + ".");
+      System.out.println("El libro " + libro.getTitulo() + " está escrito en " + libro.getIdioma() + ".");
       return true;
     } else {
-      System.out.println("El libro " + libro + " está en español.");
+      System.out.println("El libro " + libro.getTitulo() + " está en español.");
       return false;
     }
   }
