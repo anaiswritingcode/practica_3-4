@@ -4,15 +4,17 @@ public class Sala {
   private String nombre;
   private String tipo;
   private int capacidad;
+  private int numPersonas;
   private boolean tienePizarra;
   private boolean estaDisponible;
 
-  public Sala(String nombre, String tipo) {
+  public Sala(String nombre, String tipo, int numPersonas) {
     this.nombre = nombre;
     this.tipo = tipo;
+    this.numPersonas = numPersonas;
     this.capacidad = 30;
     this.tienePizarra = true;
-    this.estaDisponible = true;
+    this.estaDisponible = this.numPersonas == 0;
   }
 
   public String getNombre() {
@@ -23,6 +25,9 @@ public class Sala {
   }
   public int getCapacidad() {
     return this.capacidad;
+  }
+  public int getNumPersonas() {
+    return this.numPersonas;
   }
   public boolean getPizarra() {
     return this.tienePizarra;
@@ -47,6 +52,10 @@ public class Sala {
   }
   public void setPizarra(boolean tienePizarra) {
     this.tienePizarra = tienePizarra;
+  }
+  public void setNumPersonas(int numPersonas) {
+    this.numPersonas = numPersonas;
+    this.estaDisponible = this.numPersonas == 0;
   }
   public void setDisponibilidad(boolean estaDisponible) {
     this.estaDisponible = estaDisponible;

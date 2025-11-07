@@ -94,12 +94,33 @@ public class Biblioteca {
   public String buscarLibroPorTitulo(String titulo) {
     for (Libro libro : libros) {
       if (libro.getTitulo().equalsIgnoreCase(titulo)) {
-        System.out.println("El libro " + libro.getTitulo() + " se encuentra en la biblioteca " + this.nombre + ".");
+        System.out.println("\nEl libro " + libro.getTitulo() + " se encuentra en la biblioteca " + this.nombre + ".");
         return libro.getTitulo();
       }
     }
     
     System.out.println("El libro " + titulo + "no se ha encontrado en la biblioteca " + this.nombre + ".");
     return null;
+  }
+
+  // * Para mostrar las salas disponibles:
+  public void mostrarSalasDisponibles() {
+    int contadorSalas = 1;
+    boolean hayDisponibles = false; // Lo dejamos así de forma predeterminada hasta que se demuestre lo contrario.
+
+    System.out.println("\nSalas disponibles en la biblioteca " + this.nombre + ":");
+
+    for (Sala sala : salas) {
+      if (sala.getDisponibilidad()) {
+        System.out.println(contadorSalas + ". " + sala.getNombre() + "."); // Mostramos una lista numérica.
+        
+        contadorSalas++;
+        hayDisponibles = true;
+      }
+    }
+
+    if (!hayDisponibles) {
+      System.out.println("No hay salas disponibles en la biblioteca " + this.nombre + ".");
+    }
   }
 }
