@@ -22,6 +22,7 @@ public class Main {
     sala1.entrarPersona(persona2);
     sala1.entrarPersona(persona3);
 
+    libro1.mostrarInfo();
     biblioteca1.esExtranjero(libro1);
     biblioteca1.mostrarBiblioteca();
     biblioteca1.buscarLibroPorTitulo("Aguas Rojas");
