@@ -74,6 +74,7 @@ public class Libro {
 
   // * Para mostrar información básica de un libro:
   public void mostrarInfo() {
-    System.out.println("\nLibro: " + this.titulo + ". Editorial: " + this.editorial + ". Idioma: " + this.idioma + ". Año: " + this.anno + ".");
+    System.out.println("\nLibro: " + this.titulo + ". ISBN: " + this.ISBN + ". Editorial: " + this.editorial + ". Idioma: " + this.idioma + ". Año: " + this.anno + ". Número de páginas: " + this.numPaginas + ".");
+    estaDisponible();
   }
 }

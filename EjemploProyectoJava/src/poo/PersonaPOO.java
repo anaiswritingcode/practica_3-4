@@ -67,7 +67,7 @@ public class PersonaPOO {
 
   // * Para mostrar información básica de una persona:
   public void mostrarInfo() {
-    System.out.println("\nNombre: " + this.nombre + ", edad: " + this.edad + ", y dirección: " + this.direccion + ".");
+    System.out.println("\nNombre: " + this.nombre + ". Apellidos: " + this.apellidos + ". Edad: " + this.edad + ". Dirección: " + this.direccion + ". DNI: " + this.DNI + ". Email: " + this.email + ". Teléfono: " + this.telefono + ". Profesión: " + this.profesion + ". Años de experiencia: " + this.annosExperiencia + ".");
   }
 
   // * Para ver si una persona está jubilada:
