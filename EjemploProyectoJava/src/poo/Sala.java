@@ -1,20 +1,20 @@
 package poo;
+import java.util.*;
 
 public class Sala {
   private String nombre;
   private String tipo;
   private int capacidad;
-  private int numPersonas;
   private boolean tienePizarra;
   private boolean estaDisponible;
+  private List<PersonaPOO> personas = new ArrayList<>();
 
-  public Sala(String nombre, String tipo, int numPersonas) {
+  public Sala(String nombre, String tipo) {
     this.nombre = nombre;
     this.tipo = tipo;
-    this.numPersonas = numPersonas;
     this.capacidad = 30;
     this.tienePizarra = true;
-    this.estaDisponible = this.numPersonas == 0;
+    this.estaDisponible = true;
   }
 
   public String getNombre() {
@@ -27,13 +27,28 @@ public class Sala {
     return this.capacidad;
   }
   public int getNumPersonas() {
-    return this.numPersonas;
+    return this.personas.size();
   }
   public boolean getPizarra() {
     return this.tienePizarra;
   }
   public boolean getDisponibilidad() {
     return this.estaDisponible;
+  }
+
+  public void entrarPersona(PersonaPOO persona) {
+    if (this.personas.size() < this.capacidad) {
+      this.personas.add(persona);
+      this.estaDisponible = false;
+    } else {
+      System.out.println("La sala " + this.nombre + " está llena, ya no pueden entrar más personas.");
+    }
+  }
+  public void salirPersona(PersonaPOO persona) {
+    this.personas.remove(persona);
+    if (this.personas.isEmpty()) {
+      this.estaDisponible = true;
+    }
   }
 
   public void setNombre(String nombre) {
@@ -52,10 +67,6 @@ public class Sala {
   }
   public void setPizarra(boolean tienePizarra) {
     this.tienePizarra = tienePizarra;
-  }
-  public void setNumPersonas(int numPersonas) {
-    this.numPersonas = numPersonas;
-    this.estaDisponible = this.numPersonas == 0;
   }
   public void setDisponibilidad(boolean estaDisponible) {
     this.estaDisponible = estaDisponible;
@@ -78,8 +89,12 @@ public class Sala {
   }
 
   public void informacion() {
-    System.out.println("Sala: " + this.nombre + " - " + this.capacidad + ". Se utiliza para " + this.tipo + ".");
+    System.out.println("\nSala: " + this.nombre + " - " + this.capacidad + ". Se utiliza para " + this.tipo + ".");
     tienePizarra();
     estaDisponible();
   }
+
+  public void mostrarPersonas() {
+    System.out.println("\nNúmero de personas en la sala " + this.nombre + ": " + this.personas.size() + ".");
+}
 }

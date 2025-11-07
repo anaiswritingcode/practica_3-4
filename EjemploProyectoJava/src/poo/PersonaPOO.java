@@ -10,7 +10,7 @@ public class PersonaPOO {
   private String email;
   private String telefono;
   private String profesion;
-  int anyosExperiencia;
+  int annosExperiencia;
 
   // * Definición del comportamiento de la persona:
   public PersonaPOO(String nombre, int edad) {
@@ -39,8 +39,8 @@ public class PersonaPOO {
   public void setProfesion(String profesion) {
     this.profesion = profesion;
   }
-  public void setAnyosExperiencia(int anyosExperiencia) {
-    this.anyosExperiencia = anyosExperiencia;
+  public void setAnnosExperiencia(int annosExperiencia) {
+    this.annosExperiencia = annosExperiencia;
   }
 
   public int getEdad() {
@@ -61,8 +61,8 @@ public class PersonaPOO {
   public String getProfesion() {
     return this.profesion;
   }
-  public int getAnyosExperiencia() {
-    return this.anyosExperiencia;
+  public int getAnnosExperiencia() {
+    return this.annosExperiencia;
   }
 
   public void mostrarInformacion() {

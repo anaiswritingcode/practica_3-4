@@ -8,6 +8,7 @@ public class Biblioteca {
   private int horaCierre;
   private List<Libro> libros = new ArrayList<>();
   private List<Sala> salas = new ArrayList<>();
+  private List<PersonaPOO> personas = new ArrayList<>();
 
   public Biblioteca(String nombre, String direccion) {
     this.nombre = nombre;
@@ -122,5 +123,16 @@ public class Biblioteca {
     if (!hayDisponibles) {
       System.out.println("No hay salas disponibles en la biblioteca " + this.nombre + ".");
     }
+  }
+
+  // * Para mostrar el número de personas total, contando todas las salas:
+  public void mostrarPersonasTotal() {
+    int numPersonasTotal = 0;
+
+    for (Sala sala : salas) {
+      numPersonasTotal += sala.getNumPersonas();
+    }
+
+    System.out.println("\nNúmero total de personas en la biblioteca " + this.nombre + ": " + numPersonasTotal + ".");
   }
 }
