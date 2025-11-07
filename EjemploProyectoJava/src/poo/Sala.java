@@ -41,7 +41,7 @@ public class Sala {
       this.personas.add(persona);
       this.estaDisponible = false;
     } else {
-      System.out.println("La sala " + this.nombre + " está llena, ya no pueden entrar más personas.");
+      System.out.println("\nLa sala " + this.nombre + " está llena, ya no pueden entrar más personas.");
     }
   }
   public void salirPersona(PersonaPOO persona) {
@@ -58,7 +58,7 @@ public class Sala {
     if (tipo.equals("estudio") || tipo.equals("lectura") || tipo.equals("infantil")) {
       this.tipo = tipo;
     } else {
-      System.out.println("Tipo de sala no admitido.");
+      System.out.println("\nTipo de sala no admitido.");
       this.tipo = null;
     }
   }
@@ -72,28 +72,32 @@ public class Sala {
     this.estaDisponible = estaDisponible;
   }
 
+  // * Para ver si una sala está disponible:
   public void estaDisponible() {
     if (this.estaDisponible) {
-      System.out.println("La sala se encuentra disponible para su reserva.");
+      System.out.println("\nLa sala se encuentra disponible para su reserva.");
     } else {
-      System.out.println("La sala no se encuentra disponible.");
+      System.out.println("\nLa sala no se encuentra disponible.");
     }
   }
 
+  // * Para ver si una sala tiene pizarra:
   public void tienePizarra() {
     if (this.tienePizarra) {
-      System.out.println("La sala dispone de pizarra.");
+      System.out.println("\nLa sala dispone de pizarra.");
     } else {
-      System.out.println("La sala no dispone de pizarra.");
+      System.out.println("\nLa sala no dispone de pizarra.");
     }
   }
 
-  public void informacion() {
+  // * Para mostrar información sobre una sala:
+  public void mostrarInfo() {
     System.out.println("\nSala: " + this.nombre + " - " + this.capacidad + ". Se utiliza para " + this.tipo + ".");
     tienePizarra();
     estaDisponible();
   }
 
+  // * Para mostrar el número de personas en una sala:
   public void mostrarPersonas() {
     System.out.println("\nNúmero de personas en la sala " + this.nombre + ": " + this.personas.size() + ".");
 }

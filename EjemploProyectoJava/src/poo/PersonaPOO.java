@@ -65,10 +65,12 @@ public class PersonaPOO {
     return this.annosExperiencia;
   }
 
-  public void mostrarInformacion() {
+  // * Para mostrar información básica de una persona:
+  public void mostrarInfo() {
     System.out.println("\nNombre: " + this.nombre + ", edad: " + this.edad + ", y dirección: " + this.direccion + ".");
   }
 
+  // * Para ver si una persona está jubilada:
   public boolean estaJubilado() {
     if (this.edad > 65) {
       System.out.println("\nLa persona " + this.nombre + " está jubilada.");

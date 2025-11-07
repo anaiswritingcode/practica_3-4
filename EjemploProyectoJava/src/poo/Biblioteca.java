@@ -47,17 +47,17 @@ public class Biblioteca {
   // * Para ver si un libro está en un idioma distinto al español:
   public boolean esExtranjero(Libro libro) {
     if (!libro.getIdioma().equalsIgnoreCase("español")) {
-      System.out.println("El libro " + libro.getTitulo() + " está escrito en " + libro.getIdioma() + ".");
+      System.out.println("\nEl libro " + libro.getTitulo() + " está escrito en " + libro.getIdioma() + ".");
       return true;
     } else {
-      System.out.println("El libro " + libro.getTitulo() + " está en español.");
+      System.out.println("\nEl libro " + libro.getTitulo() + " está en español.");
       return false;
     }
   }
 
   // * Para mostrar información de la biblioteca:
-  public void informacion() {
-    System.out.println("Biblioteca: " + this.nombre + " - " + this.direccion + ". Abierto de " + this.horaApertura + " a " + this.horaCierre + ".");
+  public void mostrarInfo() {
+    System.out.println("\nBiblioteca: " + this.nombre + " - " + this.direccion + ". Abierto de " + this.horaApertura + " a " + this.horaCierre + ".");
   }
 
   // * Para mostrar los libros y salas disponibles:
@@ -100,7 +100,7 @@ public class Biblioteca {
       }
     }
     
-    System.out.println("El libro " + titulo + "no se ha encontrado en la biblioteca " + this.nombre + ".");
+    System.out.println("\nEl libro " + titulo + "no se ha encontrado en la biblioteca " + this.nombre + ".");
     return null;
   }
 
@@ -121,7 +121,7 @@ public class Biblioteca {
     }
 
     if (!hayDisponibles) {
-      System.out.println("No hay salas disponibles en la biblioteca " + this.nombre + ".");
+      System.out.println("\nNo hay salas disponibles en la biblioteca " + this.nombre + ".");
     }
   }
 

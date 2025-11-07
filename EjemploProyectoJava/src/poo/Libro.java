@@ -63,11 +63,17 @@ public class Libro {
     return this.estaDisponible;
   }
 
+  // * Para ver si un libro se puede reservar:
   public void estaDisponible() {
     if (this.estaDisponible) {
-      System.out.println("El libro se encuentra disponible para su reserva.");
+      System.out.println("\nEl libro se encuentra disponible para su reserva.");
     } else {
-      System.out.println("El libro no se encuentra disponible.");
+      System.out.println("\nEl libro no se encuentra disponible.");
     }
+  }
+
+  // * Para mostrar información básica de un libro:
+  public void mostrarInfo() {
+    System.out.println("\nLibro: " + this.titulo + ". Editorial: " + this.editorial + ". Idioma: " + this.idioma + ". Año: " + this.anno + ".");
   }
 }
