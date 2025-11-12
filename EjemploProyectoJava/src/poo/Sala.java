@@ -4,9 +4,11 @@ import java.util.*;
 public class Sala {
   private String nombre;
   private String tipo;
-  private int capacidad;
+  private int capacidad; // Sería el aforo máximo.
   private boolean tienePizarra;
   private boolean estaDisponible;
+  private int numActualPersonas;
+  private PersonaPOO personaResponsable;
   private List<PersonaPOO> personas = new ArrayList<>();
 
   public Sala(String nombre, String tipo) {
@@ -15,6 +17,11 @@ public class Sala {
     this.capacidad = 30;
     this.tienePizarra = true;
     this.estaDisponible = true;
+    this.numActualPersonas = this.personas.size();
+  }
+
+  public void setPersonaResponsable(PersonaPOO personaResponsable) {
+    this.personaResponsable = personaResponsable;
   }
 
   public String getNombre() {
@@ -35,6 +42,9 @@ public class Sala {
   public boolean getDisponibilidad() {
     return this.estaDisponible;
   }
+  public String getPersonaResponsable() {
+    return this.personaResponsable.getNombre();
+  } 
 
   public void entrarPersona(PersonaPOO persona) {
     if (this.personas.size() < this.capacidad) {

@@ -24,6 +24,9 @@ public class PersonaPOO {
     this.direccion = direccion;
   }
 
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
   public void setApellidos(String apellidos) {
     this.apellidos = apellidos;
   }
@@ -43,6 +46,9 @@ public class PersonaPOO {
     this.annosExperiencia = annosExperiencia;
   }
 
+  public String getNombre() {
+    return this.nombre;
+  }
   public int getEdad() {
     return this.edad;
   }
