@@ -58,6 +58,14 @@ public class Biblioteca {
   // * Para mostrar información de la biblioteca:
   public void mostrarInfo() {
     System.out.println("\nBiblioteca: " + this.nombre + " - " + this.direccion + ". Abierto de " + this.horaApertura + " a " + this.horaCierre + ".");
+    mostrarSalasDisponibles();
+    mostrarBiblioteca();
+
+    int contadorPersonas = 1;
+    for (PersonaPOO persona : personas) {
+      System.out.println(contadorPersonas + ". "); // Mostramos una lista numérica.
+      System.out.println(persona.getNombre() + ".");
+    }
   }
 
   // * Para mostrar los libros y salas disponibles:
@@ -134,5 +142,15 @@ public class Biblioteca {
     }
 
     System.out.println("\nNúmero total de personas en la biblioteca " + this.nombre + ": " + numPersonasTotal + ".");
+  }
+
+  // * Para registrar visitas:
+  public void registrarVisita(PersonaPOO persona) {
+    System.out.println("\nPersona que entra: " + persona.getNombre() + ".");
+  }
+
+  // * Para asignar como responsable a una persona:
+  public void asignarResponsable(Sala sala, PersonaPOO persona) {
+    sala.setPersonaResponsable(persona);
   }
 }
