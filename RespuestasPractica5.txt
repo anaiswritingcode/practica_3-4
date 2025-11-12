@@ -1,0 +1,18 @@
+a. ¿Qué tipo de relación hay entre Biblioteca y Sala? ¿Por qué?
+  Existe una relación de composición entre ellas, ya que Sala no tendría sentido si no existe Biblioteca donde estar. Si no existe Biblioteca, lo lógico sería que desapareciera Sala.
+
+b. ¿Qué pasaría con las salas si se destruye la biblioteca?
+  Dejarían de existir, porque no tendrían donde estar. Serían salas sueltas, lo cual no tiene sentido.
+
+c. ¿En qué se diferencia la agregación de la composición en tu código?
+  Biblioteca añade Salas y las contiene (composición), por lo que las posee y controla completamente. Libro puede existir por sí mismo, pero dado nuestro ejercicio lo contiene Biblioteca.
+
+d. ¿Por qué tiene sentido que LibroDigital y LibroFisico hereden de
+Libro?
+  Porque tanto LibroDigital como LibroFisico comparten atributos comunes propios de un libro general, por tanto creamos Libro para gestionar aquellas propiedades comunes y no tener que repetirlas en cada tipo distinto de libro.
+
+e. ¿Qué ventaja ofrece la herencia al definir distintos tipos de personas?
+  Al igual que con las subclases de Libro, los diferentes tipos de personas pueden heredar de PersonaPOO atributos comunes a cualquier tipo de persona, evitando la redundancia.
+
+f. ¿Dónde usarías @Override en tu implementación?
+  Por ejemplo, si añadieramos un método mostrarInfo() en Usuario que añada las cualidades propias de Usuario al método mostrarInfo() de la superclase PersonaPOO. De esta forma, si usaramos el método con un objeto de tipo Usuario, saldría la versión del método de Usuario en vez de la general de PersonaPOO.
