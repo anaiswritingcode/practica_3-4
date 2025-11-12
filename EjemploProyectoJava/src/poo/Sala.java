@@ -65,7 +65,7 @@ public class Sala {
     this.nombre = nombre;
   }
   public void setTipo(String tipo) {
-    if (tipo.equals("estudio") || tipo.equals("lectura") || tipo.equals("infantil")) {
+    if (tipo.equals("estudio") || tipo.equals("lectura") || tipo.equals("informática")) {
       this.tipo = tipo;
     } else {
       System.out.println("\nTipo de sala no admitido.");
