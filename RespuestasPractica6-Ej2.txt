@@ -1,0 +1,37 @@
+CLASE 'PERSONA':
+  a. Nombre de la clase: Persona.
+  b. Atributos con su tipo: dni (String), nombre (String), fechaNacimiento (Date).
+  c. Métodos con su nombre, parámetros y tipo de retorno: getEdad (no parametros, devuelve 'int').
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'PROFESOR':
+  a. Nombre de la clase: Profesor.
+  b. Atributos con su tipo: salario (double).
+  c. Métodos con su nombre, parámetros y tipo de retorno: asignarCurso (objeto Curso como parámetro, no devuelve nada).
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'ESTUDIANTE':
+  a. Nombre de la clase: Estudiante.
+  b. Atributos con su tipo: repetidor (boolean).
+  c. Métodos con su nombre, parámetros y tipo de retorno: inscribirse (objeto Curso como parámetro, devuleve objeto Matricula).
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'MATRICULA':
+  a. Nombre de la clase: Matricula.
+  b. Atributos con su tipo: fecha (Date), notaFinal (double).
+  c. Métodos con su nombre, parámetros y tipo de retorno: calcularNotaFinal (no parametros, devuelve 'double').
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'DIRECCION':
+  a. Nombre de la clase: Direccion.
+  b. Atributos con su tipo: calle (String), numero (int), ciudad (String).
+  c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'CURSO':
+  a. Nombre de la clase: Curso.
+  b. Atributos con su tipo: codigo (String), nombre (String), cupoMaximo (int).
+  c. Métodos con su nombre, parámetros y tipo de retorno: inscribir (objeto Estudiante como parámetro, devuelve Matricula).
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+[!!! terminar]
