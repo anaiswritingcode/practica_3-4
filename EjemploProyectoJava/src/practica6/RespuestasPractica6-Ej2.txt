@@ -1,7 +1,7 @@
 CLASE 'PERSONA':
   a. Nombre de la clase: Persona.
   b. Atributos con su tipo: dni (String), nombre (String), fechaNacimiento (Date).
-  c. Métodos con su nombre, parámetros y tipo de retorno: getEdad (no parametros, devuelve 'int').
+  c. Métodos con su nombre, parámetros y tipo de retorno: getEdad (no parametros, devuelve un 'int').
   d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
 
 CLASE 'PROFESOR':
@@ -13,13 +13,13 @@ CLASE 'PROFESOR':
 CLASE 'ESTUDIANTE':
   a. Nombre de la clase: Estudiante.
   b. Atributos con su tipo: repetidor (boolean).
-  c. Métodos con su nombre, parámetros y tipo de retorno: inscribirse (objeto Curso como parámetro, devuleve objeto Matricula).
+  c. Métodos con su nombre, parámetros y tipo de retorno: inscribirse (objeto Curso como parámetro, devuleve un objeto Matricula).
   d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
 
 CLASE 'MATRICULA':
   a. Nombre de la clase: Matricula.
   b. Atributos con su tipo: fecha (Date), notaFinal (double).
-  c. Métodos con su nombre, parámetros y tipo de retorno: calcularNotaFinal (no parametros, devuelve 'double').
+  c. Métodos con su nombre, parámetros y tipo de retorno: calcularNotaFinal (no parametros, devuelve un 'double').
   d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
 
 CLASE 'DIRECCION':
@@ -31,7 +31,17 @@ CLASE 'DIRECCION':
 CLASE 'CURSO':
   a. Nombre de la clase: Curso.
   b. Atributos con su tipo: codigo (String), nombre (String), cupoMaximo (int).
-  c. Métodos con su nombre, parámetros y tipo de retorno: inscribir (objeto Estudiante como parámetro, devuelve Matricula).
+  c. Métodos con su nombre, parámetros y tipo de retorno: inscribir (objeto Estudiante como parámetro, devuelve un objeto Matricula).
   d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
 
-[!!! terminar]
+CLASE 'DEPARTAMENTO':
+  a. Nombre de la clase: Departamento.
+  b. Atributos con su tipo: nombre (String).
+  c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+
+CLASE 'UNIVERSIDAD':
+  a. Nombre de la clase: Universidad.
+  b. Atributos con su tipo: nombre (String).
+  c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
