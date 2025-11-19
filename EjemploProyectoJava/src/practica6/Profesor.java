@@ -7,8 +7,8 @@ public class Profesor extends Persona {
 
   // * Constructor:
 
-  public Profesor(String dni, String nombre, Date fechaNacimiento, Direccion direccion, double salario) {
-    super(dni, nombre, fechaNacimiento, direccion);
+  public Profesor(String dni, String nombre, Date fechaNacimiento, String calle, int numero, String ciudad, double salario) {
+    super(dni, nombre, fechaNacimiento, calle, numero, ciudad);
     this.salario = salario;
   }
 

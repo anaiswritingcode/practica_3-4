@@ -9,11 +9,11 @@ abstract class Persona {
 
   // * Constructor:
 
-  public Persona(String dni, String nombre, Date fechaNacimiento, Direccion direccion) {
+  public Persona(String dni, String nombre, Date fechaNacimiento, String calle, int numero, String ciudad) {
     this.dni = dni;
     this.nombre = nombre;
     this.fechaNacimiento = fechaNacimiento;
-    this.direccion = direccion;
+    direccion = new Direccion(calle, numero, ciudad);
   }
 
   // * Otros métodos:

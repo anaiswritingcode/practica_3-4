@@ -7,8 +7,8 @@ public class Estudiante extends Persona {
 
   // * Constructor:
   
-  public Estudiante(String dni, String nombre, Date fechaNacimiento, Direccion direccion, boolean repetidor) {
-    super(dni, nombre, fechaNacimiento, direccion);
+  public Estudiante(String dni, String nombre, Date fechaNacimiento,  String calle, int numero, String ciudad, boolean repetidor) {
+    super(dni, nombre, fechaNacimiento, calle, numero, ciudad);
     this.repetidor = repetidor;
   }
 
