@@ -2,8 +2,10 @@ package practica6;
 import java.util.*;
 
 public class Matricula {
-  Date fecha;
-  double notaFinal;
+  private Date fecha;
+  private double notaFinal;
+
+  // * Constructor:
 
   public Matricula(Date fecha, double notaFinal) {
     this.fecha = fecha;

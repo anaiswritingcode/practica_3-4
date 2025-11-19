@@ -1,9 +1,11 @@
 package practica6;
 
 public class Direccion {
-  String calle;
-  int numero;
-  String ciudad;
+  private String calle;
+  private int numero;
+  private String ciudad;
+
+  // * Constructor:
 
   public Direccion(String calle, int numero, String ciudad) {
     this.calle = calle;

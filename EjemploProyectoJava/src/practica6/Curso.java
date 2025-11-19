@@ -2,12 +2,14 @@ package practica6;
 import java.util.*;
 
 public class Curso {
-  String codigo;
-  String nombre;
-  int cupoMaximo;
-  Departamento departamento;
-  List<Matricula> matriculas;
-  List<Horario> horarios = new ArrayList<>();
+  private String codigo;
+  private String nombre;
+  private int cupoMaximo;
+  private Departamento departamento;
+  private List<Matricula> matriculas;
+  private List<Horario> horarios = new ArrayList<>();
+
+  // * Constructor:
 
   public Curso(String codigo, String nombre, int cupoMaximo, Departamento departamento) {
     this.codigo = codigo;

@@ -2,8 +2,10 @@ package practica6;
 import java.util.*;
 
 public class Universidad {
-  String nombre;
-  List<Departamento> departamentos;
+  private String nombre;
+  private List<Departamento> departamentos;
+
+  // * Constructor:
 
   public Universidad(String nombre) {
     this.nombre = nombre;
