@@ -2,7 +2,7 @@ CLASE 'PERSONA':
   a. Nombre de la clase: Persona.
   b. Atributos con su tipo: dni (String), nombre (String), fechaNacimiento (Date).
   c. Métodos con su nombre, parámetros y tipo de retorno: getEdad (no parametros, devuelve un 'int').
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): es superclase de Estudiante y Profesor, tiene una relación de agregación con Direccion.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Profesor y Estudiante se relaciona con Persona mediante herencia, tiene una relación de composición con Direccion.
 
 CLASE 'PROFESOR':
   a. Nombre de la clase: Profesor.
@@ -20,19 +20,19 @@ CLASE 'MATRICULA':
   a. Nombre de la clase: Matricula.
   b. Atributos con su tipo: fecha (Date), notaFinal (double).
   c. Métodos con su nombre, parámetros y tipo de retorno: calcularNotaFinal (no parametros, devuelve un 'double').
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de composición con Curso y otra de asociación con Estudiante.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene relaciones de asociación con Curso y Estudiante.
 
 CLASE 'DIRECCION':
   a. Nombre de la clase: Direccion.
   b. Atributos con su tipo: calle (String), numero (int), ciudad (String).
   c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Persona se relaciona con Direccion mediante agregación.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Persona se relaciona con Direccion mediante composición.
 
 CLASE 'CURSO':
   a. Nombre de la clase: Curso.
   b. Atributos con su tipo: codigo (String), nombre (String), cupoMaximo (int).
   c. Métodos con su nombre, parámetros y tipo de retorno: inscribir (objeto Estudiante como parámetro, devuelve un objeto Matricula).
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Profesor se relaciona con Curso mediante asociación, Departamento mediante agregación, Matricula mediante composición y Horario mediante agregación.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Profesor se relaciona con Curso mediante asociación, Departamento mediante agregación, Matricula mediante asociación y Horario mediante composición.
 
 CLASE 'DEPARTAMENTO':
   a. Nombre de la clase: Departamento.
@@ -50,4 +50,4 @@ CLASE 'HORARIO':
   a. Nombre de la clase: Horario.
   b. Atributos con su tipo: diaSemana (String), horaInicio (Time), horaFin (Time).
   c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de agregación con Curso.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de composición con Curso.
