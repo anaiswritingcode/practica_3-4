@@ -11,4 +11,10 @@ public class Matricula {
     this.fecha = fecha;
     this.notaFinal = notaFinal;
   }
+
+  // * Otros métodos:
+
+  public double calcularNotaFinal() {
+    // ...
+  }
 }

@@ -15,4 +15,10 @@ abstract class Persona {
     this.fechaNacimiento = fechaNacimiento;
     this.direccion = direccion;
   }
+
+  // * Otros métodos:
+
+  public int getEdad() {
+    // ...
+  }
 }

@@ -11,4 +11,10 @@ public class Estudiante extends Persona {
     super(dni, nombre, fechaNacimiento, direccion);
     this.repetidor = repetidor;
   }
+
+  // * Otros métodos:
+
+  public Matricula inscribirse(Curso curso) {
+    // ...
+  }
 }

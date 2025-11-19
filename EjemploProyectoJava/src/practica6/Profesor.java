@@ -11,4 +11,10 @@ public class Profesor extends Persona {
     super(dni, nombre, fechaNacimiento, direccion);
     this.salario = salario;
   }
+
+  // * Otros métodos:
+
+  public void asignarCurso(Curso curso) {
+    // ...
+  }
 }

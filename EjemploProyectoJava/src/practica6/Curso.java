@@ -18,4 +18,10 @@ public class Curso {
     this.departamento = departamento;
     matriculas = new ArrayList<>();
   }
+
+  // * Otros métodos:
+
+  public Matricula inscribir(Estudiante estudiante) {
+    // ...
+  }
 }
