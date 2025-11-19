@@ -2,46 +2,52 @@ CLASE 'PERSONA':
   a. Nombre de la clase: Persona.
   b. Atributos con su tipo: dni (String), nombre (String), fechaNacimiento (Date).
   c. Métodos con su nombre, parámetros y tipo de retorno: getEdad (no parametros, devuelve un 'int').
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): es superclase de Estudiante y Profesor, tiene una relación de agregación con Direccion.
 
 CLASE 'PROFESOR':
   a. Nombre de la clase: Profesor.
   b. Atributos con su tipo: salario (double).
   c. Métodos con su nombre, parámetros y tipo de retorno: asignarCurso (objeto Curso como parámetro, no devuelve nada).
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): hereda de Persona, tiene una relación de dependencia con Curso.
 
 CLASE 'ESTUDIANTE':
   a. Nombre de la clase: Estudiante.
   b. Atributos con su tipo: repetidor (boolean).
   c. Métodos con su nombre, parámetros y tipo de retorno: inscribirse (objeto Curso como parámetro, devuleve un objeto Matricula).
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): hereda de Persona, tiene una relación de composición con Matricula.
 
 CLASE 'MATRICULA':
   a. Nombre de la clase: Matricula.
   b. Atributos con su tipo: fecha (Date), notaFinal (double).
   c. Métodos con su nombre, parámetros y tipo de retorno: calcularNotaFinal (no parametros, devuelve un 'double').
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de agregación con Curso.
 
 CLASE 'DIRECCION':
   a. Nombre de la clase: Direccion.
   b. Atributos con su tipo: calle (String), numero (int), ciudad (String).
   c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Persona se relaciona con Direccion mediante agregación.
 
 CLASE 'CURSO':
   a. Nombre de la clase: Curso.
   b. Atributos con su tipo: codigo (String), nombre (String), cupoMaximo (int).
   c. Métodos con su nombre, parámetros y tipo de retorno: inscribir (objeto Estudiante como parámetro, devuelve un objeto Matricula).
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Profesor se relaciona con Curso mediante dependencia, Departamento mediante agregación, Matricula mediante agregación y Horario mediante agregación.
 
 CLASE 'DEPARTAMENTO':
   a. Nombre de la clase: Departamento.
   b. Atributos con su tipo: nombre (String).
   c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de composición con Universidad y otra de agregación con Curso.
 
 CLASE 'UNIVERSIDAD':
   a. Nombre de la clase: Universidad.
   b. Atributos con su tipo: nombre (String).
   c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
-  d. Relaciones con otras clases (asociación, agregación, composición, herencia): ???
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): Departamento se relaciona con Universidad mediante composición.
+
+CLASE 'HORARIO':
+  a. Nombre de la clase: Horario.
+  b. Atributos con su tipo: diaSemana (String), horaInicio (Time), horaFin (Time).
+  c. Métodos con su nombre, parámetros y tipo de retorno: ninguno.
+  d. Relaciones con otras clases (asociación, agregación, composición, herencia): tiene una relación de agregación con Curso.
